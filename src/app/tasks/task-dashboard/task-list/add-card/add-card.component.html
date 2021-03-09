@@ -4,11 +4,13 @@
     type="text"
     class="form-control"
     formControlName="name"
+    autocomplete="off"
     id="cardname"
     maxlength="150"
   />
   <button
     type="button"
+    id="saveCard"
     aria-label="Save card"
     class="btn btn-primary mt-2"
     [disabled]="!addCardForm.valid"

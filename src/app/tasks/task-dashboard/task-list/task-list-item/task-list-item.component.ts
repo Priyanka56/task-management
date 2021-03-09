@@ -1,6 +1,5 @@
 import { ChangeDetectionStrategy, Component, Input, OnInit } from '@angular/core';
-import { Task } from 'src/app/tasks/models/task.model.';
-
+import { Task } from '../../../models/task.model.';
 @Component({
   selector: 'app-task-list-item',
   templateUrl: './task-list-item.component.html',

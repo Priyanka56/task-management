@@ -73,12 +73,14 @@ export class TaskDashboardComponent implements OnDestroy {
    *
    * @param cardData: cardData filled by user on add card form
    */
-  public addCardTolist(cardData: { name: string; status: string }): void {
+  public addCardTolist(cardData: {
+    name: string;
+    status: string;
+  }): void {
     if (cardData) {
       let itemToBeAdded: Task = {
-        id: this.uniqueStringForId(9),
         name: cardData?.name,
-        status: cardData?.status
+        status: cardData?.status,
       };
       this.taskService.updateTaskList(itemToBeAdded);
     }
@@ -103,23 +105,12 @@ export class TaskDashboardComponent implements OnDestroy {
    *
    * @param groupName : updating flag for showAddCardForm for given group name
    */
-  private changeAddCardFormState(groupName: string): void {
+  public changeAddCardFormState(groupName: string): void {
     this.taskStatuses.map((group) =>
       group.name === groupName
         ? (group.showAddCardForm = !group.showAddCardForm)
         : group
     );
-  }
-
-  /**
-   *
-   * @param length : stringLength to ve returned for unique string for id
-   */
-  private uniqueStringForId(length: number) {
-    return Math.random()
-      .toString(36)
-      .replace(/[^a-z]+/g, '')
-      .substr(0, length);
   }
 
   // On Destory method to remove subscription

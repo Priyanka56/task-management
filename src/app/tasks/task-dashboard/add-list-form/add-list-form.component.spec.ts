@@ -1,4 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { AddListFormComponent } from './add-list-form.component';
 
@@ -8,7 +9,8 @@ describe('AddListFormComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ AddListFormComponent ]
+      declarations: [ AddListFormComponent ],
+      imports: [ReactiveFormsModule]
     })
     .compileComponents();
   });
