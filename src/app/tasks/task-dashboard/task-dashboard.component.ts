@@ -7,7 +7,7 @@ import { Task, TaskStatus } from '../models/task.model.';
 import { TaskService } from '../services/task.service';
 
 @Component({
-  selector: '',
+  selector: 'task-dashboard',
   templateUrl: './task-dashboard.component.html',
 })
 export class TaskDashboardComponent implements OnDestroy {
